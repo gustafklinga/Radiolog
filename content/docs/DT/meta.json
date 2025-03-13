@@ -1,0 +1,5 @@
+{
+    "title": "DT",
+    "root": true,
+    "pages": ["...", "!index"]
+  }

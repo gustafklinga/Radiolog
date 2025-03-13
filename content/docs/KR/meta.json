@@ -1,0 +1,5 @@
+{
+    "title": "KR",
+    "root": true,
+    "pages": ["...", "!index"]
+  }

@@ -1,0 +1,6 @@
+{
+    "title": "MR",
+    "description": "Test",
+    "root": true,
+    "pages": ["...", "!index"]
+  }
