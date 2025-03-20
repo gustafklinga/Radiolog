@@ -1,7 +1,8 @@
-Discordserver
+
 Nyhetsflöde
 https://www.sfnr.org/svarsstoed. Nya svarsmallar. Spara ned + länka
 Kloka Kliniska val
 Ändra gruppering till anatomi/subspecialitetsindelat.
 Lägg till akutkategori, Trauma, Stroke, Kontrastmedelsreaktion
 https://radhq.net/hy/
+CAA amyloid angiopati

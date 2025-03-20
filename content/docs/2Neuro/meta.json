@@ -1,0 +1,5 @@
+{
+    "title": "Neuro",
+    "root": true,
+    "pages": ["...", "!index"]
+  }

@@ -1,0 +1,5 @@
+{
+    "title": "Thorax",
+    "root": true,
+    "pages": ["...", "!index"]
+  }

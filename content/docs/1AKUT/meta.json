@@ -1,0 +1,5 @@
+{
+    "title": "AKUT",
+    "root": true,
+    "pages": ["...", "!index"]
+  }

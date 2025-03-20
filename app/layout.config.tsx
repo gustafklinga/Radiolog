@@ -26,10 +26,16 @@ export const baseOptions: BaseLayoutProps = {
   },
   links: [
     {
-      text: 'Hem',
+      text: 'Akut',
+      url: '/docs/1AKUT',
+      active: 'nested-url',
+    },
+    {
+      text: 'Länksamling',
       url: '/docs',
       active: 'nested-url',
     },
+  
   ],
   
 };
