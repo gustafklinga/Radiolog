@@ -1,0 +1,5 @@
+{
+    "title": "Övrigt",
+    "root": true,
+    "pages": ["...", "!index"]
+  }
