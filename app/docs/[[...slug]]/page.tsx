@@ -1,4 +1,8 @@
 import { source } from '@/lib/source';
+import { getGithubLastEdit } from 'fumadocs-core/server';
+
+
+
 import {
   DocsPage,
   DocsBody,
@@ -8,6 +12,8 @@ import {
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 
+
+
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
@@ -16,10 +22,15 @@ export default async function Page(props: {
   if (!page) notFound();
 
   const MDX = page.data.body;
-
+  const time = await getGithubLastEdit({
+    owner: 'gustafklinga',
+    repo: 'Radiolog',
+    path: `content/docs/${page.file.path}`,
+    token: `Bearer ${process.env.GIT_TOKEN}`,
+  });
  
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage toc={page.data.toc} full={page.data.full} lastUpdate={time ? new Date(time) : undefined} footer={{enabled: false}}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
