@@ -30,7 +30,7 @@ export default async function Page(props: {
   });
  
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} lastUpdate={new Date(time)} footer={{enabled: false}}>
+    <DocsPage toc={page.data.toc} full={page.data.full} lastUpdate={time ? new Date(time) : undefined} footer={{enabled: false}}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
