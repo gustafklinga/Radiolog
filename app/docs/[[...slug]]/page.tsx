@@ -1,6 +1,6 @@
 import { source } from '@/lib/source';
 import { getGithubLastEdit } from 'fumadocs-core/server';
-
+import { ImageZoom } from "fumadocs-ui/components/image-zoom";
 
 
 import {
@@ -34,7 +34,13 @@ export default async function Page(props: {
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <MDX components={{ ...defaultMdxComponents }} />
+      <MDX
+          components={{
+            ...defaultMdxComponents,
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            img: props => <ImageZoom {...props as any} />
+            }}
+        />
       </DocsBody>
     </DocsPage>
   );
